@@ -19,7 +19,7 @@ body{
     align-items: center;
 }
 
-td{
-    font-family: Shadows Into Light;
+td,th{
+    /* font-family: Shadows Into Light; */
     font-size: x-large;
 }

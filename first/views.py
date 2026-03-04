@@ -1,8 +1,14 @@
 from django.http import HttpResponse
-
 from django.shortcuts import render
+from pavani.models import Pets
+
 def home(request):
-    return render(request,'home.html')
+    #Fetching data from database
+    data = Pets.objects.all()
+    context = {
+        'Pets' : data
+    }
+    return render(request,'home.html',context)
 
 def about(request):
     return render(request,'about.html')

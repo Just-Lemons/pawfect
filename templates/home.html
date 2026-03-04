@@ -17,7 +17,7 @@
 </head>
 <body>
     <h1>Home Page</h1>
-    <div class="table1">
+    <!-- <div class="table1">
         <table class="table">
   <thead>
     <tr>
@@ -48,8 +48,49 @@
     </tr>
   </tbody>
 </table>
-    </div>
+    </div> -->
 
+    <!-- trying to add the list -->
+    <!-- <div class="list">
+      <ul>
+        {% for pet in Pets %}
+          <li>{{ pet.name }} - {{ pet.breed }} - {{ pet.category }}</li>
+        {% endfor %}
+    </ul>
+    </div> -->
+
+    <div class="table2">
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Breed</th>
+      <th scope="col">Category</th>
+    </tr>
+  </thead>
+  <tbody>
+        {% for pet in Pets %}
+     <tr>
+        <!-- Access object attributes within the loop -->
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ pet.name }}</td>
+        <td>{{ pet.breed }}</td>
+        <td>{{ pet.category }}</td>
+        </tr>
+          {% empty %}
+          <!-- Message to display if the queryset is empty -->
+           <tr>
+              <td colspan="4">No data available.</td>
+            </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+    </div>
+    
+
+    <!-- Image of the cat -->
     <div class="im">
       <img src="{% static 'images/cat.jpg' %}">
     </div>
