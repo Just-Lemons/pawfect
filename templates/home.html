@@ -64,9 +64,10 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Name</th>
+      <th scope="col">Name</th>     
       <th scope="col">Breed</th>
       <th scope="col">Category</th>
+      <th>Price</th>
     </tr>
   </thead>
   <tbody>
@@ -77,6 +78,7 @@
         <td>{{ pet.name }}</td>
         <td>{{ pet.breed }}</td>
         <td>{{ pet.category }}</td>
+        <td>${{ pet.price }}</td>
         </tr>
           {% empty %}
           <!-- Message to display if the queryset is empty -->

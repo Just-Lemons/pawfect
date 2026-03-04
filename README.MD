@@ -6,7 +6,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Step 1 : Create Virtual Environments
 -- or use pip(easier)
 
-python3 -m venv env
+python3 -m venv [environment name]
 source venv/bin/activate
 
 Step 2 : Install Django
