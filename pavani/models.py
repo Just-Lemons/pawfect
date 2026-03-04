@@ -8,6 +8,10 @@ class Pets(models.Model):
     arrival_date = models.DateTimeField(auto_now_add=True)
     photo = models.ImageField(upload_to='images',null=True,blank=True)
     category = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.category
+    
     
 
 
