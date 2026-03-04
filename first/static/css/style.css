@@ -1,0 +1,20 @@
+h1{
+    color:rgb(49, 22, 199);
+    height: 75px;
+    text-align: center;
+    font-family: Freckle Face;
+}
+body{
+    background-color: aliceblue;
+
+}
+
+.table{
+    border: 2px solid black;
+}
+
+.im{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
